@@ -1,0 +1,80 @@
+      /* Container styling */
+      .swiper-container {
+        width: 100%;
+        height: 100%;
+    }
+
+  
+    
+    /* Mirror Glass Effect for swiper-slide */
+    .swiper-slide {
+        padding: 20px;
+        background: rgba(252, 245, 245, 0.1); /* Transparent white background */
+        backdrop-filter: blur(10px); /* Blur the background for that glass effect */
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(22, 21, 75, 0.15); /* Soft shadow for depth */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+    }
+
+    /* Hover effect for a more interactive glass look */
+    .swiper-slide:hover {
+        transform: translateY(-10px); /* Slight lift effect */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+    }
+
+    /* Mirror-like reflection (bottom) effect */
+    .swiper-slide::after {
+        content: "";
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        right: 0;
+        height: 30px;
+        background: rgba(255, 255, 255, 0.2); /* Semi-transparent white */
+        border-radius: 10px;
+        box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.1);
+        opacity: 0.2;
+        transform: scaleY(-1); /* Flip it vertically to mimic reflection */
+    }
+
+    /* Optional: Styling for text and buttons */
+    .swiper-slide h3 {
+        font-size: 1.25rem;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    .swiper-slide .text-lg {
+        font-size: 1rem;
+        color: #666;
+        margin-bottom: 15px;
+    }
+
+    .swiper-slide button {
+        background-color: #000;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .swiper-slide button:hover {
+        background-color: #444;
+    }
+
+    /* Optional: Additional Swiper styling */
+    .swiper-button-next, .swiper-button-prev {
+        color: #fff;
+    }
+
+    .swiper-pagination-bullet {
+        background: #fff;
+        opacity: 0.7;
+    }
